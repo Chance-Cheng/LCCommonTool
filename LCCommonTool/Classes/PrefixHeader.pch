@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  testFastline
+//
+//  Created by Chance on 2023/8/7.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define LSLog(format, ...) printf("class: <%p %s:(%d) > method: %s \n%s\n", self, [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] )
+#else
+#define LSLog(format, ...)
+#endif
+
+//#import "MJExtension.h"
+//#import "UIColor+Additions.h"
+//#import <Masonry/Masonry.h>
+#import <objc/runtime.h>
+
+#endif /* PrefixHeader_pch */

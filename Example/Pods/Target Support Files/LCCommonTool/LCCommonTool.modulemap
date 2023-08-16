@@ -1,0 +1,6 @@
+framework module LCCommonTool {
+  umbrella header "LCCommonTool-umbrella.h"
+
+  export *
+  module * { export * }
+}
